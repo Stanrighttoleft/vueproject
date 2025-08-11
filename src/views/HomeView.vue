@@ -93,7 +93,7 @@ const getImages= ref([
     <News/>
     <AboutUs/>
          
-    <ImageCard :visibleNumber="6" :getImages="getImages"/>
+    <!-- <ImageCard :visibleNumber="6" :getImages="getImages"/> -->
     </div>
     
 

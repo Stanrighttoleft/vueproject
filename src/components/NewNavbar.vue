@@ -24,7 +24,7 @@
                         <li 
                         v-for="(item,index) in link"
                         :key="index"
-                        ><RouterLink :to=item.goTo class="navlink">{{ item.name }}</RouterLink></li>
+                        ><RouterLink :to=item.goTo class="navlink"><span >{{ item.name }}</span></RouterLink></li>
                     </ul>
                 </div>
             </div>
