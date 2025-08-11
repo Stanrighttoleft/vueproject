@@ -1,22 +1,22 @@
 <template>
     <div class="container-fluid p-0 m-0">
         <div class="nav row bg-secondary p-0 m-0">
-            <div class="logo p-0 m-0 col-3">
-                <RouterLink to="/" class="text-danger"><img :src="logo" alt="" class=""><span class="text-white text-docoration-none">澳丁團購</span></RouterLink>
+            <div class="logo p-0 m-0 col-2">
+                <RouterLink to="/" class="text-danger"><img :src="logo" alt="" class="w-100"></RouterLink>
             </div>
-            <div class="nav-right-top col-sm-9 d-flex flex-column p-0 m-0">
+            <div class="nav-right-top col-sm-10 d-flex flex-column p-0 m-0">
                 <div class="d-flex flex-row p-0 m-0" >
-                    <div class="col-sm-6 d-flex justify-content-end p-0 m-0">
+                    <div class="col-sm-7 d-flex justify-content-end p-0 m-0">
                         <img class="facebook" :src="facebook" alt="">
-                        <span class="text-light d-none d-lg-block" >關注我們</span>
+                        <span class="text-light d-none d-md-inline" >關注我們</span>
                         <img :src="like" alt="" class="like">
                     </div>
-                    <div class="nav-top-right col-sm-6  justify-content-end d-flex p-0 m-0"> 
+                    <div class="nav-top-right col-sm-5  justify-content-end d-flex p-0 m-0"> 
                         <RouterLink to="/login">
-                            <img :src="login" alt="" class="login"><span class="text-light d-none d-lg-inline">會員登入</span>
+                             <img :src="login" alt="" class="login"><span class="text-light d-none d-lg-inline">會員登入</span>
                         </RouterLink>
                         <img :src="cart" alt="" class="cart"><span class="text-light d-none d-lg-inline">購物車</span>
-                         <img :src="searchIcon" alt="" class="search-icon"><span class="text-light d-none d-lg-inline">搜尋商品</span>
+                         <img :src="searchIcon" alt="" class="search-icon"><span class="text-light d-none d-lg-inline">查找商品</span>
                     </div>
                 </div>               
                 <div class="navlist col-sm-12 d-none d-sm-flex justify-content-end align-items-center p-0 m-0">
@@ -24,7 +24,7 @@
                         <li 
                         v-for="(item,index) in link"
                         :key="index"
-                        ><RouterLink :to=item.goTo class="navlink"><span >{{ item.name }}</span></RouterLink></li>
+                        ><RouterLink :to=item.goTo class="navlink">{{ item.name }}</RouterLink></li>
                     </ul>
                 </div>
             </div>
@@ -43,12 +43,12 @@ const login=ref('./assets/user.png');
 const searchIcon=ref('./assets/search.png');
 const cart=ref('./assets/cart.png');
 const link=ref([{
-        name:'購物首頁',
+        name:'團購首頁',
         goTo:'/',
 
     },
     {
-        name:'關於澳丁',
+        name:'關於澳打',
         goTo:'/about',
     },
     {
@@ -56,7 +56,7 @@ const link=ref([{
         goTo:'/products',
 
     },{
-        name:'聯繫我們',
+        name:'聯絡我們',
         goTo:'/contact',
     }])
       

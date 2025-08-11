@@ -1,5 +1,7 @@
 <template>
     <ProductShow :productsList="list"/>
+    <sidecollapse/>
+
 
    
   
@@ -8,7 +10,9 @@
 <script setup>
 import product from '@/components/product.vue';
 import ProductShow from '@/components/ProductShow.vue';
+import Sidecollapse from '@/components/Sidecollapse.vue';
 import { ref } from 'vue';
+
 const list=ref([{
     id:1,
     category:'雜貨',

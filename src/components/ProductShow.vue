@@ -1,5 +1,5 @@
 <template>
-     <div class="productShow position-relative m-0">
+     <div class="productShow position-relative">
       <div class="container-fluid shows p-0 m-0 "  >
         <div ref="productDiv" class="row d-flex flex-row flex-nowrap overflow-hidden position-relative">
           <div class="col-1 col-sm-3 productcard p-2 m-1 rounded-3 bg-light" v-for="(product, index) in productsList" :key="index">
@@ -45,7 +45,7 @@ const prevBun=ref('/assets/left.png');
 const nextBun=ref('/assets/right.png');
 const productDiv=ref(null);
 const scrollInterval=ref(null);
-const scrollAmount=3000;
+const scrollAmount=300;
 const startScroll=(direction)=>{
   if(!productDiv.value) return;
 
@@ -97,5 +97,8 @@ const props=defineProps({
 .productBun{
   height: 40px;
   cursor: pointer;
+}
+.productShow{
+  background-color: rgba(116, 124, 8, 0.548);
 }
 </style>

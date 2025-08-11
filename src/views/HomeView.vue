@@ -6,7 +6,8 @@ import product from '@/components/product.vue';
 import ProductShow from '@/components/ProductShow.vue';
 import News from '@/components/news.vue';
 import AboutUs from '@/components/AboutUs.vue';
-
+import Footer from '@/components/Footer.vue';
+import Shipment from '@/components/Shipment.vue';
 
 
 
@@ -92,12 +93,12 @@ const getImages= ref([
     <ProductShow :productsList="list"/>
     <News/>
     <AboutUs/>
+    <shipment/>
          
     <!-- <ImageCard :visibleNumber="6" :getImages="getImages"/> -->
-    </div>
-    
+     <Footer/>
 
    
-    
+    </div>
   
 </template>

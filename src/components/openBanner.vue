@@ -35,13 +35,16 @@ const fu=ref('/assets/fun.png')
 .open::before{
     content: '';
     position: absolute;
-    top:40%;
-    left: 0;
-    right: 0;
-    bottom: -70%;
-    background-image:url('/assets/grass1.svg');
+    display: block;
+    width: 100%;
+    height: 300px;
+  
+    bottom: 0%;
+    background-image:url('/assets/grass.svg');
+    background-size: contain;
     background-repeat: repeat-x;
     background-position: center;
+    z-index: 2;
 }
 
 .open::after{
@@ -51,7 +54,7 @@ const fu=ref('/assets/fun.png')
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(256, 256,256, 0.3);  
+    background-color: rgba(255, 255,255, 0.3);  
     z-index: 1;
     pointer-events: none;
 }
